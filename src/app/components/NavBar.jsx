@@ -7,6 +7,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import MenuOverlay from './MenuOverlay';
 
 const navLinks = [
+    { path: "#home", title: "Home" },
     { path: "#about", title: "About" },
     { path: "#projects", title: "Projects" },
     { path: "#contact", title: "Contact" }
@@ -17,15 +18,12 @@ const NavBar = () => {
 
     return (
         <nav className='fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100'>
-            <div className='flex container flex-wrap items-center justify-between mx-auto md:py-1.25'>
-                <Link href={"/"} className='flex items-center'>
-                    <Image 
-                        src="/logo.png" 
-                        alt="Logo"
-                        width={80}  
-                        height={80} 
-                    />
-                </Link>
+            <div className='flex container flex-wrap items-center justify-between mx-auto md:py-5'>
+                <div className="flex items-center">
+                    <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        Personal Portfolio
+                    </span>
+                </div>
 
                 <div className='mobile-menu block md:hidden'>
                     {!navbarOpen ? (
